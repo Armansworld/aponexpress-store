@@ -184,9 +184,9 @@
                             <i class="fa-solid fa-cart-shopping"></i>
                             <span>এখনই অর্ডার করুন (COD)</span>
                         </a>
-                        <a id="ui-hero-whatsapp-btn" href="https://wa.me/8801348302629" target="_blank" rel="noopener" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-2xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-lg transition-all">
-                            <i class="fa-brands fa-whatsapp text-2xl"></i>
-                            <span>হোয়াটসঅ্যাপে কথা বলুন</span>
+                        <a href="#features" class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-6 py-4 rounded-2xl bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold text-lg transition-all">
+                            <i class="fa-solid fa-list-check text-amber-300"></i>
+                            <span>বিস্তারিত ফিচার দেখুন</span>
                         </a>
                     </div>
                 </div>
@@ -577,30 +577,30 @@
     <!-- ফ্লোটিং হোয়াটসঅ্যাপ চ্যাট বাটন -->
     <a id="ui-floating-whatsapp" href="https://wa.me/8801348302629" target="_blank" rel="noopener" class="fixed bottom-5 right-5 z-40 flex items-center gap-2.5 bg-emerald-500 hover:bg-emerald-600 text-white px-4 py-3 rounded-full shadow-2xl transition-transform hover:scale-105 group" aria-label="WhatsApp চ্যাট">
         <i class="fa-brands fa-whatsapp text-2xl sm:text-3xl"></i>
-        <span class="hidden sm:inline font-bold text-sm pr-1">সরাসরি কথা বলুন</span>
-    </a>
-
-    <!-- কাস্টমার অর্ডার কনফার্মেশন মডাল -->
-    <div id="order-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-navy-950/80 backdrop-blur-sm">
-        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-slate-200">
+    <!-- কাস্টমার অর্ডার কনফার্মেশন মডাল (সরাসরি ইন-সাইট অর্ডার রসিদ) -->
+    <div id="order-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-navy-950/80 backdrop-blur-sm overflow-y-auto">
+        <div class="bg-white rounded-3xl max-w-md w-full p-6 sm:p-8 shadow-2xl border border-slate-200 my-4">
             <div class="text-center">
-                <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
+                <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-3">
                     <i class="fa-solid fa-circle-check"></i>
                 </div>
+                <span class="inline-block px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-xs font-extrabold mb-1">
+                    সরাসরি অর্ডার সম্পন্ন হয়েছে
+                </span>
                 <h3 class="text-2xl font-extrabold text-navy-900">ধন্যবাদ! আপনার অর্ডারটি গৃহীত হয়েছে</h3>
-                <p class="text-slate-600 text-sm mt-1">আমাদের প্রতিনিধি শীঘ্রই আপনার নম্বরে কল করে অর্ডারটি কনফার্ম করবেন।</p>
+                <p class="text-slate-600 text-sm mt-1">আপনার অর্ডারটি আমাদের সিস্টেমে সরাসরি জমা হয়েছে। আমাদের প্রতিনিধি শীঘ্রই কল করে ডেলিভারি নিশ্চিত করবেন।</p>
             </div>
 
             <div id="modal-order-summary" class="mt-5 bg-slate-50 rounded-2xl p-4 border border-slate-200 text-sm space-y-2 text-slate-700"></div>
 
-            <div class="mt-6 space-y-3">
-                <a id="modal-whatsapp-btn" href="#" target="_blank" rel="noopener" class="w-full py-3.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-base flex items-center justify-center gap-2 shadow-lg transition-colors">
-                    <i class="fa-brands fa-whatsapp text-xl"></i>
-                    <span>দ্রুত ডেলিভারির জন্য WhatsApp-এ পাঠান</span>
-                </a>
-                <button type="button" id="close-modal-btn" class="w-full py-3 px-4 rounded-xl bg-slate-200 hover:bg-slate-300 text-navy-900 font-bold text-sm transition-colors">
-                    বন্ধ করুন
+            <div class="mt-6 space-y-2.5">
+                <button type="button" id="close-modal-btn" class="w-full py-3.5 px-4 rounded-xl bg-navy-900 hover:bg-brandBlue text-white font-extrabold text-base transition-colors shadow-lg">
+                    ঠিক আছে (সম্পন্ন)
                 </button>
+                <a id="modal-whatsapp-btn" href="#" target="_blank" rel="noopener" class="w-full py-2.5 px-4 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 font-bold text-xs sm:text-sm flex items-center justify-center gap-2 transition-colors">
+                    <i class="fa-brands fa-whatsapp text-base"></i>
+                    <span>ঐচ্ছিক: হোয়াটসঅ্যাপে রসিদের কপি পাঠান</span>
+                </a>
             </div>
         </div>
     </div>
@@ -689,8 +689,13 @@
 
             <!-- ট্যাব নেভিগেশন -->
             <div class="bg-slate-100 border-b border-slate-200 px-4 sm:px-8 flex overflow-x-auto gap-2 pt-3">
-                <button type="button" class="admin-tab-btn active px-4 py-2.5 rounded-t-xl font-bold text-sm whitespace-nowrap bg-white text-brandBlue border-t border-x border-slate-200" data-tab="tab-products">
-                    <i class="fa-solid fa-box-open mr-1.5"></i> পণ্য ব্যবস্থাপনা (Products)
+                <button type="button" class="admin-tab-btn active px-4 py-2.5 rounded-t-xl font-bold text-sm whitespace-nowrap bg-white text-brandBlue border-t border-x border-slate-200 flex items-center gap-1.5" data-tab="tab-orders">
+                    <i class="fa-solid fa-bag-shopping"></i>
+                    <span>অর্ডার তালিকা (Orders)</span>
+                    <span id="admin-orders-badge" class="px-2 py-0.5 rounded-full bg-brandRed text-white text-xs font-extrabold">0</span>
+                </button>
+                <button type="button" class="admin-tab-btn px-4 py-2.5 rounded-t-xl font-bold text-sm whitespace-nowrap text-slate-600 hover:text-navy-900" data-tab="tab-products">
+                    <i class="fa-solid fa-box-open mr-1.5"></i> পণ্য ও দাম পরিবর্তন
                 </button>
                 <button type="button" class="admin-tab-btn px-4 py-2.5 rounded-t-xl font-bold text-sm whitespace-nowrap text-slate-600 hover:text-navy-900" data-tab="tab-settings">
                     <i class="fa-solid fa-gear mr-1.5"></i> সাইট ও ডেলিভারি সেটিংস
@@ -703,53 +708,48 @@
                 </button>
             </div>
 
-            <!-- ট্যাব ১: পণ্য ব্যবস্থাপনা (Add / Edit / Delete Products) -->
-            <div id="tab-products" class="admin-tab-content p-5 sm:p-8 space-y-8">
-                <!-- নতুন পণ্য যোগ / এডিট ফর্ম -->
-                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-5 sm:p-6">
-                    <div class="flex items-center justify-between mb-4">
-                        <h3 id="product-form-heading" class="text-lg sm:text-xl font-extrabold text-navy-900">
-                            <i class="fa-solid fa-plus-circle text-brandBlue mr-1.5"></i> নতুন পণ্য যোগ করুন
-                        </h3>
-                        <button type="button" id="cancel-edit-product-btn" class="hidden text-xs font-bold px-3 py-1.5 rounded-lg bg-slate-200 hover:bg-slate-300 text-slate-700">
-                            এডিট বাতিল করুন
+            <!-- ট্যাব ০: সরাসরি আসা অর্ডার তালিকা (Orders Management) -->
+            <div id="tab-orders" class="admin-tab-content p-5 sm:p-8 space-y-6">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-slate-50 p-4 sm:p-5 rounded-2xl border border-slate-200">
+                    <div>
+                        <h3 class="text-lg sm:text-xl font-extrabold text-navy-900">কাস্টমারদের সরাসরি অর্ডারসমূহ</h3>
+                        <p class="text-xs sm:text-sm text-slate-600 mt-0.5">ওয়েবসাইটের অর্ডার ফর্ম থেকে আসা সকল অর্ডার এখানে স্বয়ংক্রিয়ভাবে জমা হয়।</p>
+                    </div>
+                    <div class="flex flex-wrap items-center gap-2.5">
+                        <button type="button" id="export-orders-csv-btn" class="px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs sm:text-sm font-bold shadow transition-colors">
+                            <i class="fa-solid fa-file-excel mr-1.5"></i> Excel / CSV ডাউনলোড
                         </button>
                     </div>
+                </div>
 
-                    <form id="admin-product-form" class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <input type="hidden" id="edit-product-id" value="">
+                <!-- অর্ডার পরিসংখ্যান কার্ড -->
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4">
+                    <div class="bg-blue-50 border border-blue-200 rounded-2xl p-4">
+                        <p class="text-xs font-bold text-blue-700">মোট অর্ডার</p>
+                        <p id="stat-total-orders" class="text-2xl font-extrabold text-navy-900 mt-1">০</p>
+                    </div>
+                    <div class="bg-amber-50 border border-amber-200 rounded-2xl p-4">
+                        <p class="text-xs font-bold text-amber-700">পেন্ডিং (Pending)</p>
+                        <p id="stat-pending-orders" class="text-2xl font-extrabold text-amber-700 mt-1">০</p>
+                    </div>
+                    <div class="bg-emerald-50 border border-emerald-200 rounded-2xl p-4">
+                        <p class="text-xs font-bold text-emerald-700">কনফার্ম / ডেলিভার্ড</p>
+                        <p id="stat-confirmed-orders" class="text-2xl font-extrabold text-emerald-700 mt-1">০</p>
+                    </div>
+                    <div class="bg-rose-50 border border-rose-200 rounded-2xl p-4">
+                        <p class="text-xs font-bold text-rose-700">মোট বিক্রয় মূল্য</p>
+                        <p id="stat-total-revenue" class="text-2xl font-extrabold text-brandRed mt-1">৳০</p>
+                    </div>
+                </div>
 
-                        <div>
-                            <label class="block text-xs font-bold text-slate-700 mb-1">পণ্যের নাম (Title) *</label>
-                            <input type="text" id="prod-title" required placeholder="যেমন: স্মার্ট ওয়াচ আল্ট্রা" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-sm">
-                        </div>
+                <!-- অর্ডার লিস্ট কন্টেইনার -->
+                <div id="admin-orders-list" class="space-y-3">
+                    <!-- JS থেকে অর্ডারসমূহ রেন্ডার হবে -->
+                </div>
+            </div>
 
-                        <div>
-                            <label class="block text-xs font-bold text-slate-700 mb-1">আকর্ষণীয় ট্যাগলাইন / সাবটাইটেল</label>
-                            <input type="text" id="prod-tagline" placeholder="যেমন: ওয়াটারপ্রুফ ও সুপার অ্যামোলেড ডিসপ্লে!" class="w-full px-3.5 py-2.5 rounded-xl border border-slate-300 bg-white text-sm">
-                        </div>
-
-                        <div class="grid grid-cols-3 gap-3">
-                            <div>
-                                <label class="block text-xs font-bold text-slate-700 mb-1">অফার মূল্য (৳) *</label>
-                                <input type="number" id="prod-price" required min="1" placeholder="1450" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 bg-white text-sm">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-bold text-slate-700 mb-1">আগের মূল্য (৳)</label>
-                                <input type="number" id="prod-regular-price" min="0" placeholder="2200" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 bg-white text-sm">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-bold text-slate-700 mb-1">ব্যাজ টেক্সট</label>
-                                <input type="text" id="prod-badge" placeholder="হট ডিল" class="w-full px-3 py-2.5 rounded-xl border border-slate-300 bg-white text-sm">
-                            </div>
-                        </div>
-
-                        <!-- ছবি আপলোড অথবা ইমেজ লিংক -->
-                        <div>
-                            <label class="block text-xs font-bold text-slate-700 mb-1">পণ্যের ছবি (ফাইল আপলোড বা ইমেজ লিংক দিন)</label>
-                            <div class="flex flex-col sm:flex-row gap-2">
-                                <input type="text" id="prod-image-url" placeholder="ছবির লিংক (URL) দিন অথবা ডানপাশ থেকে আপলোড করুন" class="flex-1 px-3 py-2.5 rounded-xl border border-slate-300 bg-white text-sm">
-                                <label class="cursor-pointer inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 rounded-xl bg-navy-800 hover:bg-navy-900 text-white text-xs font-bold shrink-0">
+            <!-- ট্যাব ১: পণ্য ব্যবস্থাপনা (Add / Edit / Delete Products) -->
+            <div id="tab-products" class="admin-tab-content hidden p-5 sm:p-8 space-y-8">
                                     <i class="fa-solid fa-image"></i>
                                     <span>ছবি বাছুন</span>
                                     <input type="file" id="prod-image-file" accept="image/*" class="hidden">
@@ -955,6 +955,7 @@
 
         const STORAGE_KEY_DATA = "aponexpress_site_data_v1";
         const STORAGE_KEY_PASS_HASH = "aponexpress_admin_pass_hash_v1";
+        const STORAGE_KEY_ORDERS = "aponexpress_direct_orders_v1";
 
         // ফিচার আইকন প্যালেট
         const FEATURE_STYLES = [
@@ -972,6 +973,7 @@
 
         // অ্যাপ্লিকেশন স্টেট
         let siteData = loadSiteData();
+        let directOrders = loadDirectOrders();
         let orderState = {
             selectedProductId: siteData.products[0]?.id || "",
             quantity: 1,
@@ -979,6 +981,7 @@
         };
         let isAdminAuthenticated = false;
         let pendingDeleteProductId = null;
+        let pendingDeleteOrderId = null;
 
         // টোস্ট মেসেজ ফাংশন
         function showToast(msg, isError = false) {
@@ -1033,6 +1036,27 @@
             }
         }
 
+        function loadDirectOrders() {
+            try {
+                const raw = localStorage.getItem(STORAGE_KEY_ORDERS);
+                if (raw) {
+                    const parsed = JSON.parse(raw);
+                    if (Array.isArray(parsed)) return parsed;
+                }
+            } catch (e) {
+                console.error("Failed to load orders:", e);
+            }
+            return [];
+        }
+
+        function saveDirectOrders() {
+            try {
+                localStorage.setItem(STORAGE_KEY_ORDERS, JSON.stringify(directOrders));
+            } catch (e) {
+                console.error("Failed to save orders:", e);
+            }
+        }
+
         // SHA-256 হ্যাশিং (পাসওয়ার্ড নিরাপত্তার জন্য)
         async function hashPassword(plainText) {
             const encoder = new TextEncoder();
@@ -1075,8 +1099,7 @@
             document.getElementById("ui-footer-phone-link").href = `tel:${settings.phone}`;
 
             const waDigits = getWhatsAppDigits(settings.phone);
-            const defaultWaText = encodeURIComponent(`আসসালামু আলাইকুম ${settings.brandName}, আমি একটি প্রোডাক্ট অর্ডার করতে চাই।`);
-            document.getElementById("ui-hero-whatsapp-btn").href = `https://wa.me/${waDigits}?text=${defaultWaText}`;
+            const defaultWaText = encodeURIComponent(`আসসালামু আলাইকুম ${settings.brandName}, আমি একটি প্রোডাক্ট সম্পর্কে জানতে চাই।`);
             document.getElementById("ui-floating-whatsapp").href = `https://wa.me/${waDigits}?text=${defaultWaText}`;
 
             // হিরো সেকশন (১ম প্রোডাক্ট)
@@ -1255,21 +1278,47 @@
                 ? Number(siteData.settings.dhakaCharge)
                 : Number(siteData.settings.outsideCharge);
             const zoneLabel = orderState.zone === "dhaka" ? "ঢাকার ভিতরে" : "ঢাকার বাইরে";
-            const total = (Number(product.price) * orderState.quantity) + shipping;
-            const orderId = "AE-" + Math.floor(100000 + Math.random() * 900000);
+            const subtotal = Number(product.price) * orderState.quantity;
+            const total = subtotal + shipping;
+            const orderId = "APX-" + (1000 + directOrders.length + Math.floor(Math.random() * 899));
+            const createdAt = new Date().toLocaleString("bn-BD", {
+                year: "numeric", month: "short", day: "numeric",
+                hour: "2-digit", minute: "2-digit"
+            });
+
+            // সরাসরি ওয়েবসাইটের অর্ডার ডাটাবেসে সংরক্ষণ
+            const newOrder = {
+                id: orderId,
+                createdAt,
+                customerName: name,
+                customerPhone: phone,
+                customerAddress: address,
+                productId: product.id,
+                productTitle: product.title,
+                unitPrice: Number(product.price),
+                quantity: orderState.quantity,
+                deliveryZone: zoneLabel,
+                shippingCharge: shipping,
+                totalBill: total,
+                status: "Pending"
+            };
+            directOrders.unshift(newOrder);
+            saveDirectOrders();
 
             document.getElementById("modal-order-summary").innerHTML = `
-                <div class="flex justify-between"><span class="text-slate-500">অর্ডার আইডি:</span> <strong class="text-brandBlue">${orderId}</strong></div>
+                <div class="flex justify-between"><span class="text-slate-500">অর্ডার আইডি:</span> <strong class="text-brandBlue">#${orderId}</strong></div>
+                <div class="flex justify-between"><span class="text-slate-500">তারিখ ও সময়:</span> <span class="font-semibold">${createdAt}</span></div>
                 <div class="flex justify-between"><span class="text-slate-500">গ্রাহকের নাম:</span> <strong>${name}</strong></div>
                 <div class="flex justify-between"><span class="text-slate-500">মোবাইল:</span> <strong>${phone}</strong></div>
+                <div class="flex justify-between"><span class="text-slate-500">ঠিকানা:</span> <span class="font-semibold text-right max-w-[200px]">${address}</span></div>
                 <div class="flex justify-between"><span class="text-slate-500">পণ্য:</span> <strong>${product.title} (${toBanglaNumber(orderState.quantity)} টি)</strong></div>
-                <div class="flex justify-between"><span class="text-slate-500">ডেলিভারি:</span> <strong>${zoneLabel} (${formatPrice(shipping)})</strong></div>
+                <div class="flex justify-between"><span class="text-slate-500">ডেলিভারি চার্জ:</span> <strong>${zoneLabel} (${formatPrice(shipping)})</strong></div>
                 <div class="flex justify-between pt-2 border-t border-slate-200 text-base"><span class="font-bold">সর্বমোট বিল (COD):</span> <strong class="text-brandRed">${formatPrice(total)}</strong></div>
             `;
 
-            const waMessage = `নতুন অর্ডার - ${siteData.settings.brandName}\n` +
+            const waMessage = `অর্ডার রসিদ - ${siteData.settings.brandName}\n` +
                               `------------------------\n` +
-                              `অর্ডার আইডি: ${orderId}\n` +
+                              `অর্ডার আইডি: #${orderId}\n` +
                               `নাম: ${name}\n` +
                               `মোবাইল: ${phone}\n` +
                               `ঠিকানা: ${address}\n` +
@@ -1284,6 +1333,7 @@
             const modal = document.getElementById("order-modal");
             modal.classList.remove("hidden");
             modal.classList.add("flex");
+            showToast("আপনার অর্ডারটি সরাসরি কনফার্ম হয়েছে!");
         });
 
         document.getElementById("close-modal-btn").addEventListener("click", () => {
@@ -1383,10 +1433,145 @@
         });
 
         function openDashboard() {
+            directOrders = loadDirectOrders();
+            renderAdminOrdersList();
             renderAdminProductsList();
             populateAdminSettingsForm();
             dashboardModal.classList.remove("hidden");
         }
+
+        // ====================================================================
+        // ADMIN ORDERS MANAGEMENT (সরাসরি অর্ডার দেখা, স্ট্যাটাস ও CSV এক্সপোর্ট)
+        // ====================================================================
+        function renderAdminOrdersList() {
+            const listEl = document.getElementById("admin-orders-list");
+            const badgeEl = document.getElementById("admin-orders-badge");
+
+            const totalOrders = directOrders.length;
+            const pendingCount = directOrders.filter(o => o.status === "Pending").length;
+            const confirmedCount = directOrders.filter(o => o.status === "Confirmed" || o.status === "Shipped" || o.status === "Delivered").length;
+            const totalRevenue = directOrders
+                .filter(o => o.status !== "Cancelled")
+                .reduce((sum, o) => sum + (Number(o.totalBill) || 0), 0);
+
+            badgeEl.textContent = toBanglaNumber(totalOrders);
+            document.getElementById("stat-total-orders").textContent = toBanglaNumber(totalOrders);
+            document.getElementById("stat-pending-orders").textContent = toBanglaNumber(pendingCount);
+            document.getElementById("stat-confirmed-orders").textContent = toBanglaNumber(confirmedCount);
+            document.getElementById("stat-total-revenue").textContent = formatPrice(totalRevenue);
+
+            if (totalOrders === 0) {
+                listEl.innerHTML = `
+                    <div class="text-center py-12 bg-slate-50 rounded-2xl border border-dashed border-slate-300">
+                        <i class="fa-solid fa-inbox text-4xl text-slate-300 mb-3"></i>
+                        <p class="font-bold text-slate-600">এখনো কোনো সরাসরি অর্ডার জমা পড়েনি</p>
+                        <p class="text-xs text-slate-400 mt-1">কাস্টমাররা ওয়েবসাইটের অর্ডার ফর্ম পূরণ করলে তা এখানে চলে আসবে।</p>
+                    </div>
+                `;
+                return;
+            }
+
+            const statusColors = {
+                "Pending": "bg-amber-100 text-amber-800 border-amber-300",
+                "Confirmed": "bg-blue-100 text-blue-800 border-blue-300",
+                "Shipped": "bg-purple-100 text-purple-800 border-purple-300",
+                "Delivered": "bg-emerald-100 text-emerald-800 border-emerald-300",
+                "Cancelled": "bg-rose-100 text-rose-800 border-rose-300"
+            };
+
+            listEl.innerHTML = directOrders.map(o => `
+                <div class="bg-white border border-slate-200 rounded-2xl p-4 sm:p-5 shadow-sm hover:shadow-md transition-shadow">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+                        <div class="space-y-1.5">
+                            <div class="flex flex-wrap items-center gap-2">
+                                <span class="px-2.5 py-0.5 rounded-lg bg-navy-900 text-white text-xs font-extrabold">#${o.id}</span>
+                                <span class="text-xs text-slate-500"><i class="fa-regular fa-clock mr-1"></i>${o.createdAt}</span>
+                                <span class="px-2.5 py-0.5 rounded-full text-xs font-bold border ${statusColors[o.status] || statusColors.Pending}">
+                                    ${o.status}
+                                </span>
+                            </div>
+                            <h4 class="font-extrabold text-navy-900 text-base sm:text-lg">
+                                ${o.customerName} — <a href="tel:${o.customerPhone}" class="text-royalBlue hover:underline">${o.customerPhone}</a>
+                            </h4>
+                            <p class="text-xs sm:text-sm text-slate-600"><i class="fa-solid fa-location-dot text-brandRed mr-1"></i> ${o.customerAddress} (${o.deliveryZone})</p>
+                            <p class="text-xs sm:text-sm font-bold text-slate-800 bg-slate-50 inline-block px-3 py-1 rounded-lg border border-slate-200">
+                                পণ্য: ${o.productTitle} × ${toBanglaNumber(o.quantity)} টি | মোট বিল: <span class="text-brandRed">${formatPrice(o.totalBill)}</span>
+                            </p>
+                        </div>
+
+                        <div class="flex flex-wrap items-center gap-2 pt-2 lg:pt-0 border-t lg:border-t-0 border-slate-100">
+                            <select onchange="updateOrderStatus('${o.id}', this.value)" class="px-3 py-2 rounded-xl border border-slate-300 bg-slate-50 text-xs font-bold text-navy-900 outline-none">
+                                <option value="Pending" ${o.status === "Pending" ? "selected" : ""}>Pending</option>
+                                <option value="Confirmed" ${o.status === "Confirmed" ? "selected" : ""}>Confirmed</option>
+                                <option value="Shipped" ${o.status === "Shipped" ? "selected" : ""}>Shipped</option>
+                                <option value="Delivered" ${o.status === "Delivered" ? "selected" : ""}>Delivered</option>
+                                <option value="Cancelled" ${o.status === "Cancelled" ? "selected" : ""}>Cancelled</option>
+                            </select>
+
+                            <a href="tel:${o.customerPhone}" class="px-3 py-2 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 text-xs font-bold">
+                                <i class="fa-solid fa-phone mr-1"></i> কল
+                            </a>
+
+                            <button type="button" onclick="deleteDirectOrder('${o.id}')" class="px-3 py-2 rounded-xl ${pendingDeleteOrderId === o.id ? "bg-brandRed text-white" : "bg-rose-50 hover:bg-rose-100 text-brandRed border border-rose-200"} text-xs font-bold">
+                                <i class="fa-solid fa-trash mr-1"></i> ${pendingDeleteOrderId === o.id ? "নিশ্চিত?" : "মুছুন"}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            `).join("");
+        }
+
+        function updateOrderStatus(orderId, newStatus) {
+            const order = directOrders.find(o => o.id === orderId);
+            if (order) {
+                order.status = newStatus;
+                saveDirectOrders();
+                renderAdminOrdersList();
+                showToast(`অর্ডার #${orderId} এর স্ট্যাটাস "${newStatus}" করা হয়েছে।`);
+            }
+        }
+
+        function deleteDirectOrder(orderId) {
+            if (pendingDeleteOrderId !== orderId) {
+                pendingDeleteOrderId = orderId;
+                renderAdminOrdersList();
+                return;
+            }
+            directOrders = directOrders.filter(o => o.id !== orderId);
+            pendingDeleteOrderId = null;
+            saveDirectOrders();
+            renderAdminOrdersList();
+            showToast("অর্ডারটি তালিকা থেকে মুছে ফেলা হয়েছে।");
+        }
+
+        document.getElementById("export-orders-csv-btn").addEventListener("click", () => {
+            if (directOrders.length === 0) {
+                showToast("ডাউনলোড করার মতো কোনো অর্ডার নেই!", true);
+                return;
+            }
+            const headers = ["Order ID", "Date", "Customer Name", "Phone", "Address", "Delivery Zone", "Product", "Quantity", "Total Bill (BDT)", "Status"];
+            const rows = directOrders.map(o => [
+                o.id,
+                `"${(o.createdAt || "").replace(/"/g, '""')}"`,
+                `"${(o.customerName || "").replace(/"/g, '""')}"`,
+                `"${o.customerPhone}"`,
+                `"${(o.customerAddress || "").replace(/"/g, '""')}"`,
+                `"${o.deliveryZone}"`,
+                `"${(o.productTitle || "").replace(/"/g, '""')}"`,
+                o.quantity,
+                o.totalBill,
+                o.status
+            ]);
+            const csvContent = "\uFEFF" + [headers.join(","), ...rows.map(r => r.join(","))].join("\n");
+            const blob = new Blob([csvContent], { type: "text/csv;charset=utf-8;" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = `aponexpress-orders-${new Date().toISOString().slice(0, 10)}.csv`;
+            a.click();
+            URL.revokeObjectURL(url);
+            showToast("অর্ডার তালিকা CSV/Excel ফাইলে ডাউনলোড হয়েছে!");
+        });
 
         document.getElementById("close-dashboard-btn").addEventListener("click", () => {
             dashboardModal.classList.add("hidden");
