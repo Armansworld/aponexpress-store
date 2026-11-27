@@ -269,10 +269,6 @@
       margin-bottom: 12px;
     }
 
-    .hero-title span {
-      color: #60a5fa;
-    }
-
     .hero-subtitle {
       font-size: 18px;
       color: #e2e8f0;
@@ -651,7 +647,7 @@
       background: rgba(255, 255, 255, 0.20);
     }
 
-    /* Modals (High Z-Index so nothing blocks them) */
+    /* Modals */
     .modal-backdrop {
       position: fixed;
       inset: 0;
@@ -848,13 +844,13 @@
     <div class="container hero-grid">
       <div>
         <div class="hero-tag">সুরক্ষা এখন আরও স্মার্ট • সরাসরি ওয়েবসাইটে অর্ডার</div>
-        <h1 class="hero-title" id="heroTitle">স্মার্ট ডুয়েল লেন্স <span>সিকিউরিটি ক্যামেরা</span></h1>
+        <h1 class="hero-title" id="heroTitle">স্মার্ট ডুয়েল লেন্স সিকিউরিটি ক্যামেরা</h1>
         <p class="hero-subtitle" id="heroSubtitle">চোর আসলে সাইরেন বাজবে, ডুয়েল লেন্সে সামনে ও পাশে স্পষ্ট নজরদারি, 1080p HD ভিডিও ও মোবাইল থেকেই নিয়ন্ত্রণ।</p>
 
         <div class="price-box">
-          <div class="price-now" id="heroPrice">৳১,৮৫০</div>
-          <div class="price-old" id="heroOldPrice">৳২,৫০০</div>
-          <div class="price-save" id="heroBadge">বিশেষ অফার</div>
+          <div class="price-now" id="heroPrice">৳২,২৫০</div>
+          <div class="price-old" id="heroOldPrice">৳২,৬৫০</div>
+          <div class="price-save" id="heroBadge">১৫% ছাড়</div>
         </div>
 
         <div class="hero-actions">
@@ -866,7 +862,7 @@
       </div>
 
       <div class="hero-visual">
-        <img id="heroImg" src="912518254_122098417755555516_3038645133607293140_n.jpg" alt="স্মার্ট ডুয়েল লেন্স সিকিউরিটি ক্যামেরা" onerror="this.style.background='#ffffff'; this.alt='পণ্যের ছবি';" />
+        <img id="heroImg" src="912518254_122098417755555516_3038645133607293140_n_2.jpg" alt="স্মার্ট ডুয়েল লেন্স সিকিউরিটি ক্যামেরা" onerror="this.style.background='#ffffff'; this.alt='পণ্যের ছবি';" />
         <div class="hero-caption" id="heroCaption">সহজ ইনস্টলেশন • ওয়্যারলেস • মোবাইল ও কম্পিউটার থেকে লাইভ দেখা যায়</div>
       </div>
     </div>
@@ -1119,7 +1115,7 @@
     </div>
   </div>
 
-  <!-- Product Edit / Add Modal (Dedicated High Z-Index Modal) -->
+  <!-- Product Edit / Add Modal -->
   <div class="modal-backdrop" id="productEditorModal" style="z-index: 75;" aria-hidden="true">
     <div class="modal-panel small" style="max-width: 540px;">
       <div class="modal-header" style="background: var(--royal-2);">
@@ -1145,11 +1141,11 @@
           </div>
           <div class="form-group">
             <label class="form-label" for="editProdBadge">ব্যাজ / অফার ট্যাগ</label>
-            <input type="text" id="editProdBadge" class="form-control" placeholder="যেমন: বেস্ট সেলিং" />
+            <input type="text" id="editProdBadge" class="form-control" placeholder="যেমন: ১৫% ছাড়" />
           </div>
           <div class="form-group">
             <label class="form-label" for="editProdImage">ছবির URL বা ফাইলের নাম</label>
-            <input type="text" id="editProdImage" class="form-control" placeholder="যেমন: camera.jpg অথবা https://..." />
+            <input type="text" id="editProdImage" class="form-control" placeholder="যেমন: 912518254_122098417755555516_3038645133607293140_n_2.jpg" />
           </div>
           <div class="form-group">
             <label class="form-label" for="editProdFile">অথবা ডিভাইস থেকে ছবি নির্বাচন করুন</label>
@@ -1173,11 +1169,10 @@
   </div>
 
   <script>
-    // Embedded Admin Password Hash placeholder (replaced automatically on HTML export)
     const EMBEDDED_ADMIN_HASH = "";
 
     const STORAGE_KEYS = {
-      state: "aponexpress_state_v1",
+      state: "aponexpress_state_v2",
       orders: "aponexpress_orders_v1",
       passHash: "aponexpress_admin_hash_v1",
       lockUntil: "aponexpress_lock_until_v1",
@@ -1207,11 +1202,11 @@
         {
           id: "smart-dual-lens-cam-1",
           name: "স্মার্ট ডুয়েল লেন্স সিকিউরিটি ক্যামেরা",
-          price: 1850,
-          oldPrice: 2500,
-          badge: "বিশেষ অফার",
-          image: "912518254_122098417755555516_3038645133607293140_n.jpg",
-          desc: "স্মার্ট ডুয়েল লেন্স সিকিউরিটি ক্যামেরা — চোর আসলে সাইরেন বাজবে, অটো লাইট জ্বলবে এবং নাইট ভিশনে অন্ধকারেও স্পষ্ট দেখা যাবে।",
+          price: 2250,
+          oldPrice: 2650,
+          badge: "১৫% ছাড়",
+          image: "912518254_122098417755555516_3038645133607293140_n_2.jpg",
+          desc: "স্মার্ট ডুয়েল লেন্স সিকিউরিটি ক্যামেরা — ১৫% ডিসকাউন্টে মাত্র ২২৫০ টাকায়! চোর আসলে সাইরেন বাজবে, অটো লাইট জ্বলবে এবং নাইট ভিশনে অন্ধকারেও স্পষ্ট দেখা যাবে।",
           bullets: [
             "ডুয়েল লেন্স — সামননও দেখে, পাশেও দেখে",
             "চোর আসলে সাইরেন বাজবে ও অটো লাইট জ্বলবে",
@@ -1289,12 +1284,12 @@
       document.getElementById("footerPhone").textContent = state.phone;
 
       const lead = state.products[0] || DEFAULT_STATE.products[0];
-      document.getElementById("heroTitle").innerHTML = escapeHtml(lead.name);
+      document.getElementById("heroTitle").textContent = lead.name;
       document.getElementById("heroSubtitle").textContent = lead.desc || state.tagline;
       document.getElementById("heroPrice").textContent = formatBDT(lead.price);
       document.getElementById("heroOldPrice").textContent = lead.oldPrice > lead.price ? formatBDT(lead.oldPrice) : "";
       document.getElementById("heroOldPrice").style.display = lead.oldPrice > lead.price ? "inline" : "none";
-      document.getElementById("heroBadge").textContent = lead.badge || "বিশেষ অফার";
+      document.getElementById("heroBadge").textContent = lead.badge || "১৫% ছাড়";
       document.getElementById("heroImg").src = lead.image || "";
       document.getElementById("heroImg").alt = lead.name;
 
@@ -1432,7 +1427,6 @@
       }
     }
 
-    // Admin Modal & Authentication
     function openAdminModal() {
       const modal = document.getElementById("adminModal");
       const panel = document.getElementById("adminModalPanel");
@@ -1481,12 +1475,6 @@
 
     function showAuthError(msg) {
       const el = document.getElementById("authErrorMsg");
-      el.textContent = msg;
-      el.style.display = "block";
-    }
-
-    function showAuthSuccess(msg) {
-      const el = document.getElementById("authSuccessMsg");
       el.textContent = msg;
       el.style.display = "block";
     }
@@ -1666,8 +1654,8 @@
         document.getElementById("editProdName").value = "";
         document.getElementById("editProdPrice").value = "";
         document.getElementById("editProdOldPrice").value = "";
-        document.getElementById("editProdBadge").value = "নতুন পণ্য";
-        document.getElementById("editProdImage").value = "912518254_122098417755555516_3038645133607293140_n.jpg";
+        document.getElementById("editProdBadge").value = "১৫% ছাড়";
+        document.getElementById("editProdImage").value = "912518254_122098417755555516_3038645133607293140_n_2.jpg";
         document.getElementById("editProdDesc").value = "";
         document.getElementById("editProdBullets").value = "";
       }
